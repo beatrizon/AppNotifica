@@ -20,7 +20,10 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Entrar"
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+
     }
     
 }
