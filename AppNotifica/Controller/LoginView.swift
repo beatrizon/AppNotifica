@@ -12,64 +12,23 @@ class LoginView:UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = .viewBackGroundColor
         setupVisualElements()
     }
     
-    var imageLogin: UIImageView = {
-        let imagem = UIImageView ()
-        imagem.image = UIImage(named: "ImageLogin")
-        imagem.contentMode = .scaleAspectFit
-        imagem.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imagem
-    }()
-    
-    var imageLabel: UILabel = {
-            let label = UILabel ()
-            label.textColor = UIColor(red: 0.541, green: 0.541, blue: 0.557, alpha: 1)
-            label.font = UIFont(name: "SFProDisplay-Light", size: 16)
-            label.text = "Registre e gerencie as ocorrências do seu IF"
-            label.translatesAutoresizingMaskIntoConstraints = false
-            
-            return label
-        }()
-    
-    var emailTextField: UITextField = {
-           let textField = UITextField ()
-           textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-           textField.placeholder = "E-mail"
-           textField.translatesAutoresizingMaskIntoConstraints = false
-           return textField
-       }()
-    
-    var senhaTextField: UITextField = {
-           let textField = UITextField ()
-           textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-           textField.placeholder = "Senha"
-           textField.translatesAutoresizingMaskIntoConstraints = false
-           return textField
-       }()
-    
-    var buttonLogar: UIButton = {
-          let button = UIButton ()
-          button.setTitle("LOGAR", for: .normal)
-          button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-          button.layer.cornerRadius = 14
-          button.translatesAutoresizingMaskIntoConstraints = false
+
+    var imageLogin = ImageDefault(image: "ImageLogin")
+
+    var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF")
+     
+    var emailTextField = TextFieldDefault (placeholder: "E-mail")
           
-          return button
-      }()
+    var senhaTextField = TextFieldDefault (placeholder: "Senha")
     
-    var buttonRegistrar: UIButton = {
-          let button = UIButton ()
-          button.setTitle("REGIStRAR", for: .normal)
-          button.layer.backgroundColor = UIColor(red: 0.369, green: 0.639, blue: 0.639, alpha: 1).cgColor
-          button.layer.cornerRadius = 14
-          button.translatesAutoresizingMaskIntoConstraints = false
-          
-          return button
-      }()
+    var buttonLogar = ButtonDefault(botao: "Logar")
+    
+    var buttonRegistrar = ButtonDefault(botao: "Registrar")
+       
     
     
     
@@ -93,7 +52,7 @@ class LoginView:UIView {
             imageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             imageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            emailTextField.widthAnchor.constraint(equalToConstant: 374),
+            emailTextField.widthAnchor.constraint(equalToConstant: 370),
             emailTextField.heightAnchor.constraint(equalToConstant: 67),
             emailTextField.topAnchor.constraint(equalTo: imageLogin.bottomAnchor, constant: 23),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
