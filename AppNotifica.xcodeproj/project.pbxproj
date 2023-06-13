@@ -22,6 +22,9 @@
 		244D4D6E2A375D1200B3907E /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D6D2A375D1200B3907E /* ButtonDefault.swift */; };
 		244D4D702A375F0000B3907E /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D6F2A375F0000B3907E /* LabelDefault.swift */; };
 		244D4D732A375F5B00B3907E /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D722A375F5B00B3907E /* TextFieldDefault.swift */; };
+		244D4D772A38996200B3907E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D762A38996200B3907E /* RegisterView.swift */; };
+		244D4D792A38997400B3907E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D782A38997400B3907E /* RegisterViewController.swift */; };
+		244D4D7D2A389B4400B3907E /* RegisterCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */; };
 		2450DADE2A2E1C61007388F3 /* Coodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DADD2A2E1C61007388F3 /* Coodinator.swift */; };
 		2450DAE02A2E1CFB007388F3 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */; };
 		2450DAE32A2E200F007388F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DAE22A2E200F007388F3 /* LoginView.swift */; };
@@ -65,6 +68,9 @@
 		244D4D6D2A375D1200B3907E /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
 		244D4D6F2A375F0000B3907E /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		244D4D722A375F5B00B3907E /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
+		244D4D762A38996200B3907E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		244D4D782A38997400B3907E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoodinator.swift; sourceTree = "<group>"; };
 		2450DADD2A2E1C61007388F3 /* Coodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodinator.swift; sourceTree = "<group>"; };
 		2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		2450DAE22A2E200F007388F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -173,6 +179,24 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		244D4D742A38992500B3907E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2450DAE22A2E200F007388F3 /* LoginView.swift */,
+				2450DAE42A2E2022007388F3 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		244D4D752A38993D00B3907E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				244D4D762A38996200B3907E /* RegisterView.swift */,
+				244D4D782A38997400B3907E /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		2450DADB2A2E175A007388F3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +216,7 @@
 			children = (
 				2450DADD2A2E1C61007388F3 /* Coodinator.swift */,
 				2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */,
+				244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -199,8 +224,8 @@
 		2450DAE12A2E1FCC007388F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2450DAE22A2E200F007388F3 /* LoginView.swift */,
-				2450DAE42A2E2022007388F3 /* LoginViewController.swift */,
+				244D4D752A38993D00B3907E /* Register */,
+				244D4D742A38992500B3907E /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,11 +364,14 @@
 				244835102A28CB8500D487B4 /* ViewController.swift in Sources */,
 				244D4D6C2A375AF700B3907E /* ImageDefault.swift in Sources */,
 				244D4D702A375F0000B3907E /* LabelDefault.swift in Sources */,
+				244D4D772A38996200B3907E /* RegisterView.swift in Sources */,
 				244D4D732A375F5B00B3907E /* TextFieldDefault.swift in Sources */,
 				2450DAE32A2E200F007388F3 /* LoginView.swift in Sources */,
+				244D4D792A38997400B3907E /* RegisterViewController.swift in Sources */,
 				244D4D6E2A375D1200B3907E /* ButtonDefault.swift in Sources */,
 				2450DAE02A2E1CFB007388F3 /* LoginCoodinator.swift in Sources */,
 				2448350C2A28CB8500D487B4 /* AppDelegate.swift in Sources */,
+				244D4D7D2A389B4400B3907E /* RegisterCoodinator.swift in Sources */,
 				2450DAE52A2E2022007388F3 /* LoginViewController.swift in Sources */,
 				2450DADE2A2E1C61007388F3 /* Coodinator.swift in Sources */,
 				244835162A28CB8500D487B4 /* AppNotifica.xcdatamodeld in Sources */,
