@@ -11,6 +11,8 @@ import UIKit
 
 class RegisterView:UIView {
     
+    //MARK: -Initialize
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .viewBackGroundColor
@@ -18,6 +20,7 @@ class RegisterView:UIView {
     }
     
     //MARK: -Closures
+    
     
     var onLoginTap: (() -> Void)?
   
@@ -33,8 +36,7 @@ class RegisterView:UIView {
     
     var buttonLogar = ButtonDefault(botao: "Logar")
     
- 
-    
+
     func setupVisualElements() {
 
         self.addSubview(imageLabel)
