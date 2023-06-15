@@ -11,19 +11,28 @@ import UIKit
 
 class RegisterViewController: UIViewController{
     
-    var viewMain =  RegisterView()
+    //MARK: - Clousures
+
+      var onLoginTap: (() -> Void)?
+      lazy var registerView: RegisterView = {
+          let registerView = RegisterView()
+           registerView.onLoginTap = {
+             self.onLoginTap?()
+         }
+         return registerView
+         
+      } ()
+      
     
     override func loadView() {
-        self.view = viewMain
+        self.view = registerView
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Registrar"
-        
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
 
     }
     
