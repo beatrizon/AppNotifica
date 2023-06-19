@@ -5,35 +5,33 @@
 //  Created by IFBIOTIC10 on 13/06/23.
 //
 
-
 import Foundation
 import UIKit
 
-class RegisterViewController: UIViewController{
+class RegisterViewController: ViewControllerDefault {
+   
+    //MARK: -  Clouseres
+    var onLoginTap: (() -> Void)?
     
-    //MARK: - Clousures
+    lazy var registerView: RegisterView = {
+        let registerView = RegisterView()
+         registerView.onLoginTap = {
+           self.onLoginTap?()
+       }
+       return registerView
+       
+    } ()
+    
+    
+       override func loadView(){
+           self.view = registerView
+       }
+       
 
-      var onLoginTap: (() -> Void)?
-      lazy var registerView: RegisterView = {
-          let registerView = RegisterView()
-           registerView.onLoginTap = {
-             self.onLoginTap?()
-         }
-         return registerView
-         
-      } ()
-      
-    
-    override func loadView() {
-        self.view = registerView
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+       override func viewDidLoad() {
+           super.viewDidLoad()
         self.title = "Registrar"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
 
-    }
-    
+       }
+
 }

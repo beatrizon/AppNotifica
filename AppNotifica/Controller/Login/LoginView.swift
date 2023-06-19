@@ -19,6 +19,7 @@ class LoginView:UIView {
     //MARK: -Closures
     
     var onRegisterTap: (() -> Void)?
+    var onLoginTap: (() -> Void)?
     
     // MARK: -Properties
     
@@ -33,10 +34,7 @@ class LoginView:UIView {
     var buttonLogar = ButtonDefault(botao: "Logar")
     
     var buttonRegistrar = ButtonDefault(botao: "Registrar")
-       
-    
-    
-    
+ 
     func setupVisualElements() {
         self.addSubview(imageLogin)
         self.addSubview(imageLabel)
@@ -46,6 +44,8 @@ class LoginView:UIView {
         self.addSubview(buttonRegistrar)
         
         buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
+        
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
@@ -88,14 +88,18 @@ class LoginView:UIView {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    //MARK: -Action
-    
+          fatalError("init(coder:) has not been implemented")
+      }
+      
+      //MARK: - Actions
+      @objc
+      private func registerTap(){
+          onRegisterTap?()
+      }
+      
     @objc
-    private func registerTap(){
-        onRegisterTap?()
-    }
+      private func loginTap(){
+          onLoginTap?()
+      }
     
 }

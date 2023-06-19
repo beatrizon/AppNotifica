@@ -7,27 +7,34 @@
 
 
 import Foundation
-import UIKit
 
-class RegisterCoodinator: Coodinator{
+import UIKit
+class RegisterCoodinator: Coodinator {
+    
+   
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
     
-    func start() {
-        let  viewController = RegisterViewController()
-        self.navigationController.pushViewController(viewController, animated: true)
-        
-        viewController.onLoginTap = {
-            self.gotoLogin()
+    init (navigationController: UINavigationController ) {
+            self.navigationController = navigationController
+     
         }
-      
-    }
-    func gotoLogin(){
-        let coordinator = LoginCoodinator(navigationController: navigationController)
-        coordinator.start()
+
+      func start() {
+        let viewController = RegisterViewController()
+            self.navigationController.pushViewController(viewController, animated: true)
+          
+          
+          viewController.onLoginTap = {
+              self.gotoLogin()
+          }
+
     }
     
+   
+    func  gotoLogin() {
+        
+        
+        self.navigationController.popViewController(animated: true)
+    }
 }

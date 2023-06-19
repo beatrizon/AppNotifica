@@ -25,6 +25,10 @@
 		244D4D772A38996200B3907E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D762A38996200B3907E /* RegisterView.swift */; };
 		244D4D792A38997400B3907E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D782A38997400B3907E /* RegisterViewController.swift */; };
 		244D4D7D2A389B4400B3907E /* RegisterCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */; };
+		244D4D822A3B534C00B3907E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D812A3B534C00B3907E /* HomeView.swift */; };
+		244D4D842A3B536F00B3907E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D832A3B536F00B3907E /* HomeViewController.swift */; };
+		244D4D862A3B5E7600B3907E /* HomeCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D852A3B5E7600B3907E /* HomeCoodinator.swift */; };
+		244D4D882A3B61DD00B3907E /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244D4D872A3B61DD00B3907E /* ViewControllerDefault.swift */; };
 		2450DADE2A2E1C61007388F3 /* Coodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DADD2A2E1C61007388F3 /* Coodinator.swift */; };
 		2450DAE02A2E1CFB007388F3 /* LoginCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */; };
 		2450DAE32A2E200F007388F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2450DAE22A2E200F007388F3 /* LoginView.swift */; };
@@ -71,6 +75,10 @@
 		244D4D762A38996200B3907E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		244D4D782A38997400B3907E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoodinator.swift; sourceTree = "<group>"; };
+		244D4D812A3B534C00B3907E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		244D4D832A3B536F00B3907E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		244D4D852A3B5E7600B3907E /* HomeCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoodinator.swift; sourceTree = "<group>"; };
+		244D4D872A3B61DD00B3907E /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
 		2450DADD2A2E1C61007388F3 /* Coodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodinator.swift; sourceTree = "<group>"; };
 		2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoodinator.swift; sourceTree = "<group>"; };
 		2450DAE22A2E200F007388F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 				244D4D6D2A375D1200B3907E /* ButtonDefault.swift */,
 				244D4D6F2A375F0000B3907E /* LabelDefault.swift */,
 				244D4D722A375F5B00B3907E /* TextFieldDefault.swift */,
+				244D4D872A3B61DD00B3907E /* ViewControllerDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -197,6 +206,15 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		244D4D7E2A3B52FD00B3907E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				244D4D812A3B534C00B3907E /* HomeView.swift */,
+				244D4D832A3B536F00B3907E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2450DADB2A2E175A007388F3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +235,7 @@
 				2450DADD2A2E1C61007388F3 /* Coodinator.swift */,
 				2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */,
 				244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */,
+				244D4D852A3B5E7600B3907E /* HomeCoodinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -224,6 +243,7 @@
 		2450DAE12A2E1FCC007388F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				244D4D7E2A3B52FD00B3907E /* Home */,
 				244D4D752A38993D00B3907E /* Register */,
 				244D4D742A38992500B3907E /* Login */,
 			);
@@ -363,11 +383,15 @@
 			files = (
 				244835102A28CB8500D487B4 /* ViewController.swift in Sources */,
 				244D4D6C2A375AF700B3907E /* ImageDefault.swift in Sources */,
+				244D4D882A3B61DD00B3907E /* ViewControllerDefault.swift in Sources */,
 				244D4D702A375F0000B3907E /* LabelDefault.swift in Sources */,
 				244D4D772A38996200B3907E /* RegisterView.swift in Sources */,
 				244D4D732A375F5B00B3907E /* TextFieldDefault.swift in Sources */,
+				244D4D842A3B536F00B3907E /* HomeViewController.swift in Sources */,
+				244D4D822A3B534C00B3907E /* HomeView.swift in Sources */,
 				2450DAE32A2E200F007388F3 /* LoginView.swift in Sources */,
 				244D4D792A38997400B3907E /* RegisterViewController.swift in Sources */,
+				244D4D862A3B5E7600B3907E /* HomeCoodinator.swift in Sources */,
 				244D4D6E2A375D1200B3907E /* ButtonDefault.swift in Sources */,
 				2450DAE02A2E1CFB007388F3 /* LoginCoodinator.swift in Sources */,
 				2448350C2A28CB8500D487B4 /* AppDelegate.swift in Sources */,

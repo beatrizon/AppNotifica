@@ -6,11 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
-protocol Coodinator {
-    
-    
-    
-    func start()
-    
+protocol  Coodinator {
+        func start ()
 }
