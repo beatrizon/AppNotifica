@@ -7,15 +7,9 @@
 import Foundation
 import UIKit
 
-class RegisterView:UIView {
+class RegisterView: ViewDefault {
     
-    //MARK: -Initialize
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackGroundColor
-        setupVisualElements()
-    }
+ 
     
     //MARK: -Closures
     
@@ -35,8 +29,8 @@ class RegisterView:UIView {
     var buttonLogar = ButtonDefault(botao: "Logar")
     
 
-    func setupVisualElements() {
-
+    override func setupVisualElements() {
+        super.setupVisualElements()
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(senhaTextField)
@@ -95,11 +89,8 @@ class RegisterView:UIView {
         ])
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+   
     //MARK: -Action
-    
     @objc
     private func loginTap(){
         onLoginTap?()

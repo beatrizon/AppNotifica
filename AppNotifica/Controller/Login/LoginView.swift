@@ -8,13 +8,8 @@
 import Foundation
 import UIKit
 
-class LoginView:UIView {
+class LoginView: ViewDefault {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .viewBackGroundColor
-        setupVisualElements()
-    }
     
     //MARK: -Closures
     
@@ -27,21 +22,24 @@ class LoginView:UIView {
 
     var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF", font: UIFont.systemFont(ofSize: 17, weight: .regular))
      
-    var emailTextField = TextFieldDefault (placeholder: "E-mail")
+    var emailTextField = TextFieldDefault (placeholder: "E-mail", keyBordType: .emailAddress, returnKeyType: .next)
           
-    var senhaTextField = TextFieldDefault (placeholder: "Senha")
+    var senhaTextField = TextFieldDefault (placeholder: "Senha",keyBordType: .emailAddress, returnKeyType: .done)
     
     var buttonLogar = ButtonDefault(botao: "Logar")
     
     var buttonRegistrar = ButtonDefault(botao: "Registrar")
+    
+    
  
-    func setupVisualElements() {
-        self.addSubview(imageLogin)
-        self.addSubview(imageLabel)
-        self.addSubview(emailTextField)
-        self.addSubview(senhaTextField)
-        self.addSubview(buttonLogar)
-        self.addSubview(buttonRegistrar)
+    override func setupVisualElements() {
+           super.setupVisualElements()
+           self.addSubview(imageLogin)
+           self.addSubview(imageLabel)
+           self.addSubview(emailTextField)
+           self.addSubview(senhaTextField)
+           self.addSubview(buttonLogar)
+           self.addSubview(buttonRegistrar)
         
         buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
         
@@ -66,6 +64,7 @@ class LoginView:UIView {
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
+            
             senhaTextField.widthAnchor.constraint(equalToConstant: 370),
             senhaTextField.heightAnchor.constraint(equalToConstant: 60),
             senhaTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 23),
@@ -86,20 +85,32 @@ class LoginView:UIView {
             
         ])
     }
+      
+    //MARK: - Actions
+       @objc
+       private func registerTap(){
+           onRegisterTap?()
+       }
+       
+       @objc
+       private func loginTap(){
+           onLoginTap?()
+       }
+   }
 
-    required init?(coder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
-      }
-      
-      //MARK: - Actions
-      @objc
-      private func registerTap(){
-          onRegisterTap?()
-      }
-      
-    @objc
-      private func loginTap(){
-          onLoginTap?()
-      }
+   //
+   extension LoginView: UITextFieldDelegate {
+     
     
-}
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          
+           if textField == emailTextField {
+            
+               self.senhaTextField.becomeFirstResponder()
+           } else {
+               textField.resignFirstResponder()
+           }
+           
+           return true
+       }
+   }

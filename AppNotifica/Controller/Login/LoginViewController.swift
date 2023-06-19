@@ -13,7 +13,8 @@ class LoginViewController: ViewControllerDefault {
     //MARK: -  Clouseres
     var onRegisterTap: (() -> Void)?
     var onLoginTap: (() -> Void)?
-
+    
+    
     lazy var loginView: LoginView = {
         let loginView = LoginView()
         loginView.onRegisterTap = {
