@@ -24,7 +24,13 @@ class LoginView: ViewDefault {
      
     var emailTextField = TextFieldDefault (placeholder: "E-mail", keyBordType: .emailAddress, returnKeyType: .next)
           
-    var senhaTextField = TextFieldDefault (placeholder: "Senha",keyBordType: .emailAddress, returnKeyType: .done)
+    var senhaTextField: TextFieldDefault = {
+       let text = TextFieldDefault (placeholder: "Senha",keyBordType: .emailAddress, returnKeyType: .done)
+        
+        text.isSecureTextEntry = true
+        
+        return text
+    }()
     
     var buttonLogar = ButtonDefault(botao: "Logar")
     
@@ -34,6 +40,8 @@ class LoginView: ViewDefault {
  
     override func setupVisualElements() {
            super.setupVisualElements()
+           emailTextField.delegate = self
+           senhaTextField.delegate = self
            self.addSubview(imageLogin)
            self.addSubview(imageLabel)
            self.addSubview(emailTextField)

@@ -17,5 +17,13 @@ class ViewControllerDefault: ViewController {
         self.navigationController?.navigationBar.prefersLargeTitles=true
         self.navigationItem.setHidesBackButton(true, animated: false)
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(self.hideKeyBoardByTappinoutSide))
+        
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    func hideKeyBoardByTappinoutSide(){
+        self.view.endEditing(true)
     }
 }

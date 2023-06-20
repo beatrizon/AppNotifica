@@ -18,11 +18,23 @@ class RegisterView: ViewDefault {
   
     var imageLabel = LabelDefault(text: "Entre com seu email e sua senha para se registrar", font: UIFont.systemFont(ofSize: 17, weight: .regular))
      
-    var emailTextField = TextFieldDefault (placeholder: "E-mail")
+    var emailTextField = TextFieldDefault (placeholder: "E-mail", keyBordType: .emailAddress, returnKeyType: .next)
           
-    var senhaTextField = TextFieldDefault (placeholder: "Senha")
+    var senhaTextField: TextFieldDefault = {
+        let text = TextFieldDefault (placeholder: "Senha",keyBordType: .emailAddress, returnKeyType: .next)
+         
+         text.isSecureTextEntry = true
+         
+         return text
+     }()
     
-    var confirmaSenhaTextField = TextFieldDefault (placeholder: "Confirmar Senha")
+    var confirmaSenhaTextField:  TextFieldDefault = {
+        let text = TextFieldDefault (placeholder: "Confirmar Senha",keyBordType: .emailAddress, returnKeyType: .done)
+         
+         text.isSecureTextEntry = true
+         
+         return text
+     }()
     
     var buttonRegistrar = ButtonDefault(botao: "Registrar")
     
@@ -31,6 +43,10 @@ class RegisterView: ViewDefault {
 
     override func setupVisualElements() {
         super.setupVisualElements()
+        
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
+        confirmaSenhaTextField.delegate = self
         self.addSubview(imageLabel)
         self.addSubview(emailTextField)
         self.addSubview(senhaTextField)
@@ -97,4 +113,23 @@ class RegisterView: ViewDefault {
     }
     
 }
+extension RegisterView: UITextFieldDelegate {
+  
+ 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+        if textField == emailTextField {
+         self.senhaTextField.becomeFirstResponder()
+            
+        } else if textField == senhaTextField{
+            self.confirmaSenhaTextField.becomeFirstResponder()
+            
+        }else{
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
+}
+
 
