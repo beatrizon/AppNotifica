@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		243296E62A3745C600A7E6F7 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243296E52A3745C500A7E6F7 /* UIColor+.swift */; };
+		2439167E2A447D29008337EC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439167D2A447D28008337EC /* TabBarViewController.swift */; };
+		243916802A447D6C008337EC /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439167F2A447D6C008337EC /* SobreView.swift */; };
+		243916822A447D9A008337EC /* NovaOcorrenciaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916812A447D9A008337EC /* NovaOcorrenciaView.swift */; };
+		243916842A447E78008337EC /* NovaOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916832A447E78008337EC /* NovaOcorrenciaViewController.swift */; };
+		243916862A447E95008337EC /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916852A447E95008337EC /* SobreViewController.swift */; };
+		243916882A447ED1008337EC /* SobreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916872A447ED1008337EC /* SobreCoordinator.swift */; };
+		2439168A2A447F64008337EC /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916892A447F64008337EC /* TabBarCoordinator.swift */; };
+		2439168C2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439168B2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift */; };
 		2448350C2A28CB8500D487B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350B2A28CB8500D487B4 /* AppDelegate.swift */; };
 		2448350E2A28CB8500D487B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350D2A28CB8500D487B4 /* SceneDelegate.swift */; };
 		244835102A28CB8500D487B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350F2A28CB8500D487B4 /* ViewController.swift */; };
@@ -55,6 +63,14 @@
 
 /* Begin PBXFileReference section */
 		243296E52A3745C500A7E6F7 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		2439167D2A447D28008337EC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		2439167F2A447D6C008337EC /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
+		243916812A447D9A008337EC /* NovaOcorrenciaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaView.swift; sourceTree = "<group>"; };
+		243916832A447E78008337EC /* NovaOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaViewController.swift; sourceTree = "<group>"; };
+		243916852A447E95008337EC /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		243916872A447ED1008337EC /* SobreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreCoordinator.swift; sourceTree = "<group>"; };
+		243916892A447F64008337EC /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		2439168B2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaCoordinator.swift; sourceTree = "<group>"; };
 		244835082A28CB8500D487B4 /* AppNotifica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNotifica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2448350B2A28CB8500D487B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2448350D2A28CB8500D487B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,10 +139,37 @@
 		243296E82A3745F600A7E6F7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2450DADC2A2E1C22007388F3 /* Coodinator */,
 				244D4D6A2A37594E00B3907E /* Infrastructure */,
 				243296E42A37455F00A7E6F7 /* Extensions */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		2439167A2A447C13008337EC /* NovaOcorrencia */ = {
+			isa = PBXGroup;
+			children = (
+				243916812A447D9A008337EC /* NovaOcorrenciaView.swift */,
+				243916832A447E78008337EC /* NovaOcorrenciaViewController.swift */,
+			);
+			path = NovaOcorrencia;
+			sourceTree = "<group>";
+		};
+		2439167B2A447C79008337EC /* Sobre */ = {
+			isa = PBXGroup;
+			children = (
+				2439167F2A447D6C008337EC /* SobreView.swift */,
+				243916852A447E95008337EC /* SobreViewController.swift */,
+			);
+			path = Sobre;
+			sourceTree = "<group>";
+		};
+		2439167C2A447CD3008337EC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2439167D2A447D28008337EC /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		244834FF2A28CB8500D487B4 = {
@@ -153,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				2450DAE12A2E1FCC007388F3 /* Controller */,
-				2450DADC2A2E1C22007388F3 /* Coodinator */,
 				243296E82A3745F600A7E6F7 /* Source */,
 				2450DADB2A2E175A007388F3 /* Resource */,
 				2448351C2A28CB8A00D487B4 /* Info.plist */,
@@ -239,6 +281,9 @@
 				2450DADF2A2E1CFB007388F3 /* LoginCoodinator.swift */,
 				244D4D7C2A389B4400B3907E /* RegisterCoodinator.swift */,
 				244D4D852A3B5E7600B3907E /* HomeCoodinator.swift */,
+				243916872A447ED1008337EC /* SobreCoordinator.swift */,
+				243916892A447F64008337EC /* TabBarCoordinator.swift */,
+				2439168B2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -246,6 +291,9 @@
 		2450DAE12A2E1FCC007388F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2439167C2A447CD3008337EC /* TabBar */,
+				2439167B2A447C79008337EC /* Sobre */,
+				2439167A2A447C13008337EC /* NovaOcorrencia */,
 				244D4D7E2A3B52FD00B3907E /* Home */,
 				244D4D752A38993D00B3907E /* Register */,
 				244D4D742A38992500B3907E /* Login */,
@@ -384,12 +432,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243916822A447D9A008337EC /* NovaOcorrenciaView.swift in Sources */,
 				244835102A28CB8500D487B4 /* ViewController.swift in Sources */,
 				244D4D6C2A375AF700B3907E /* ImageDefault.swift in Sources */,
+				243916802A447D6C008337EC /* SobreView.swift in Sources */,
+				2439167E2A447D29008337EC /* TabBarViewController.swift in Sources */,
+				243916882A447ED1008337EC /* SobreCoordinator.swift in Sources */,
 				244D4D882A3B61DD00B3907E /* ViewControllerDefault.swift in Sources */,
 				244D4D702A375F0000B3907E /* LabelDefault.swift in Sources */,
 				244D4D772A38996200B3907E /* RegisterView.swift in Sources */,
 				244D4D732A375F5B00B3907E /* TextFieldDefault.swift in Sources */,
+				2439168A2A447F64008337EC /* TabBarCoordinator.swift in Sources */,
 				244D4D842A3B536F00B3907E /* HomeViewController.swift in Sources */,
 				244D4D822A3B534C00B3907E /* HomeView.swift in Sources */,
 				2450DAE32A2E200F007388F3 /* LoginView.swift in Sources */,
@@ -397,13 +450,16 @@
 				244D4D862A3B5E7600B3907E /* HomeCoodinator.swift in Sources */,
 				244D4D8A2A40919700B3907E /* ViewDefault.swift in Sources */,
 				244D4D6E2A375D1200B3907E /* ButtonDefault.swift in Sources */,
+				2439168C2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift in Sources */,
 				2450DAE02A2E1CFB007388F3 /* LoginCoodinator.swift in Sources */,
 				2448350C2A28CB8500D487B4 /* AppDelegate.swift in Sources */,
+				243916862A447E95008337EC /* SobreViewController.swift in Sources */,
 				244D4D7D2A389B4400B3907E /* RegisterCoodinator.swift in Sources */,
 				2450DAE52A2E2022007388F3 /* LoginViewController.swift in Sources */,
 				2450DADE2A2E1C61007388F3 /* Coodinator.swift in Sources */,
 				244835162A28CB8500D487B4 /* AppNotifica.xcdatamodeld in Sources */,
 				2448350E2A28CB8500D487B4 /* SceneDelegate.swift in Sources */,
+				243916842A447E78008337EC /* NovaOcorrenciaViewController.swift in Sources */,
 				243296E62A3745C600A7E6F7 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
