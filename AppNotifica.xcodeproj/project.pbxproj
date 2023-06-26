@@ -16,6 +16,7 @@
 		243916882A447ED1008337EC /* SobreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916872A447ED1008337EC /* SobreCoordinator.swift */; };
 		2439168A2A447F64008337EC /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243916892A447F64008337EC /* TabBarCoordinator.swift */; };
 		2439168C2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439168B2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift */; };
+		243916902A49D80D008337EC /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2439168F2A49D80D008337EC /* EscolherImagem.swift */; };
 		2448350C2A28CB8500D487B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350B2A28CB8500D487B4 /* AppDelegate.swift */; };
 		2448350E2A28CB8500D487B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350D2A28CB8500D487B4 /* SceneDelegate.swift */; };
 		244835102A28CB8500D487B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2448350F2A28CB8500D487B4 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		243916872A447ED1008337EC /* SobreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreCoordinator.swift; sourceTree = "<group>"; };
 		243916892A447F64008337EC /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		2439168B2A447FA3008337EC /* NovaOcorrenciaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaCoordinator.swift; sourceTree = "<group>"; };
+		2439168F2A49D80D008337EC /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		244835082A28CB8500D487B4 /* AppNotifica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNotifica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2448350B2A28CB8500D487B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2448350D2A28CB8500D487B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				243916812A447D9A008337EC /* NovaOcorrenciaView.swift */,
 				243916832A447E78008337EC /* NovaOcorrenciaViewController.swift */,
+				2439168F2A49D80D008337EC /* EscolherImagem.swift */,
 			);
 			path = NovaOcorrencia;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				243916802A447D6C008337EC /* SobreView.swift in Sources */,
 				2439167E2A447D29008337EC /* TabBarViewController.swift in Sources */,
 				243916882A447ED1008337EC /* SobreCoordinator.swift in Sources */,
+				243916902A49D80D008337EC /* EscolherImagem.swift in Sources */,
 				244D4D882A3B61DD00B3907E /* ViewControllerDefault.swift in Sources */,
 				244D4D702A375F0000B3907E /* LabelDefault.swift in Sources */,
 				244D4D772A38996200B3907E /* RegisterView.swift in Sources */,
